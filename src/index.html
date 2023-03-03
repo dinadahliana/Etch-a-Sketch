@@ -9,11 +9,14 @@
 </head>
 <body>
     <h1>Etch a Sketch</h1>
-    <div class="board">
-        <div class="canvas"></div>
-        <div class="tools">
-            <input type="range" min="0" max="100">
+    <div id="canvas"></div>
+    <div id="tools">
+        <div class="range-input">
+            <input type="range" id="pi_input" min="10" max="100" step="10">
+            <p><output id="value"></output></p>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
