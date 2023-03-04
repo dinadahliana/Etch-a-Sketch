@@ -1,5 +1,4 @@
 // function to build grid
-
 const container = document.getElementById("canvas");
 
 function makeGrid(x) {
@@ -13,9 +12,22 @@ function makeGrid(x) {
 
 makeGrid(16);
 
-const value = document.querySelector("#value")
-const input = document.querySelector("#pi_input")
-value.textContent = input.value
+// display value and grid based of the user input
+const value = document.querySelector("#value");
+const input = document.querySelector("#pi_input");
+const rangeInput = input.value;
+
+value.textContent = rangeInput;
+
 input.addEventListener("input", (event) => {
-  value.textContent = event.target.value
+  value.textContent = `${event.target.value} x ${event.target.value}`;
+
+  while (container.firstChild) {
+    container.removeChild(container.lastChild);
+};
+
+  makeGrid(input.value);
+
 });
+
+
