@@ -7,6 +7,7 @@ function makeGrid(x) {
     for (c = 0; c < (x * x); c++) {
       let cell = document.createElement("div");
       container.appendChild(cell).className = "grid-item";
+      cell.addEventListener("mouseover", changeColor);
     };
   };
 
@@ -29,5 +30,12 @@ input.addEventListener("input", (event) => {
   makeGrid(input.value);
 
 });
+
+// setting up hovering 
+
+function changeColor(e) {
+    e.target.style.backgroundColor = "black";
+}
+
 
 

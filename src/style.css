@@ -26,3 +26,8 @@ body {
     padding: 20px;
     justify-content: center;
 }
+
+.dot {
+    position: absolute;
+    background-color: black;
+}
