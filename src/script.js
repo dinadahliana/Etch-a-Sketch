@@ -37,6 +37,7 @@ input.addEventListener("input", (event) => {
 const randomColorBtn = document.querySelector(".color");
 const eraserBtn = document.querySelector(".eraser");
 const defaultColorBtn = document.querySelector(".default");
+const resetBtn = document.querySelector(".reset");
 
 randomColorBtn.addEventListener("click", () => {
     colorMode = "color";
@@ -51,6 +52,12 @@ eraserBtn.addEventListener("click", () => {
 defaultColorBtn.addEventListener("click", () => {
     colorMode = "default";
     console.log("default color button was clicked");
+});
+
+resetBtn.addEventListener("click", () => {
+    container.innerHTML = "";
+    makeGrid(input.value);
+    console.log("reset button was clicked");
 });
 
 // setting up hovering 
