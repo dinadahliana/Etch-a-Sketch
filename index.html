@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Etch a Sketch</title>
+</head>
+<body>
+    <h1>Etch a Sketch</h1>
+    <div class="container">
+        <div id="tools">
+            <div class="range-input">
+                <p>grid:</p>
+                <input type="range" id="pi_input" min="10" max="100" value="16">
+                <p><output id="value">Grid: 16 x 16</output></p>
+            </div>
+            <button class="default">default color</button> <br>
+            <button class="color">random color</button> <br>
+            <button class="eraser">eraser</button> <br>
+            <button class="reset">clear canvas</button>
+        </div>
+        <div id="canvas"></div>
+    </div>
+    <footer class="footer">
+        <p>
+          Copyright ©
+          <script>
+            document.write(new Date().getFullYear())
+          </script>
+          dinadahliana
+        </p>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
